@@ -3,7 +3,7 @@
 -->
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
-  <Import Project="$(MSBuildThisFileDirectory)\Project.Shared.props" />
+  <Import Project="$(MSBuildThisFileDirectory)Project.Shared.props" />
 
   <PropertyGroup>
     <PackageOutputPath>$(MSBuildThisFileDirectory)_LocalPackages</PackageOutputPath>
@@ -12,6 +12,7 @@
   <PropertyGroup>
     <!-- See: https://docs.microsoft.com/de-de/dotnet/core/tools/csproj#nuget-metadata-properties -->
     <Copyright>Copyright © Sebastian Krysmanski 2020</Copyright>
+    <!-- See: https://spdx.org/licenses/ -->
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryUrl>URL</RepositoryUrl>
   </PropertyGroup>
