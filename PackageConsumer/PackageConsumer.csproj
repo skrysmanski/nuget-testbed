@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="$([MSBuild]::GetPathOfFileAbove('Project.Code.props', '$(MSBuildThisFileDirectory)'))" />
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+
+    <AssemblyName>NuGetTestBed.PackageConsumer</AssemblyName>
+    <RootNamespace>NuGetTestBed.PackageConsumer</RootNamespace>
+
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NuGetTestBed.PackageProvider" Version="1.0.0" />
+  </ItemGroup>
+
+</Project>
