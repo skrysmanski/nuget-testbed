@@ -9,6 +9,9 @@
     <RootNamespace>NuGetTestBed.PackageProvider</RootNamespace>
   </PropertyGroup>
 
+  <!--
+    For more available properties, see: https://docs.microsoft.com/en-us/dotnet/core/tools/csproj#nuget-metadata-properties
+  -->
   <PropertyGroup>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageOutputPath>$(MSBuildThisFileDirectory)..\_LocalPackages</PackageOutputPath>
