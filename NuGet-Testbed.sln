@@ -3,9 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackageProvider", "PackageProvider\PackageProvider.csproj", "{FBC3BF90-5CF8-4089-AAB8-D815F1EC6455}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PackageProvider", "PackageProvider\PackageProvider.csproj", "{FBC3BF90-5CF8-4089-AAB8-D815F1EC6455}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackageConsumer", "PackageConsumer\PackageConsumer.csproj", "{D2213A78-709D-476E-A870-357DD707895A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PackageConsumer", "PackageConsumer\PackageConsumer.csproj", "{D2213A78-709D-476E-A870-357DD707895A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FBC3BF90-5CF8-4089-AAB8-D815F1EC6455} = {FBC3BF90-5CF8-4089-AAB8-D815F1EC6455}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
