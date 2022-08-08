@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <Import Project="$([MSBuild]::GetPathOfFileAbove('Project.Code.props', '$(MSBuildThisFileDirectory)'))" />
+  <Import Project="$([MSBuild]::GetPathOfFileAbove('Project.Shared.props', '$(MSBuildThisFileDirectory)'))" />
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -8,6 +8,10 @@
     <AssemblyName>NuGetTestBed.PackageProvider</AssemblyName>
     <RootNamespace>NuGetTestBed.PackageProvider</RootNamespace>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="JetBrains.Annotations" Version="2022.1.0" />
+  </ItemGroup>
 
   <!--
     For more available properties, see: https://docs.microsoft.com/en-us/dotnet/core/tools/csproj#nuget-metadata-properties

@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <Import Project="$([MSBuild]::GetPathOfFileAbove('Project.Code.props', '$(MSBuildThisFileDirectory)'))" />
+  <Import Project="$([MSBuild]::GetPathOfFileAbove('Project.Shared.props', '$(MSBuildThisFileDirectory)'))" />
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>

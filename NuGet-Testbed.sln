@@ -1,13 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30320.27
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PackageProvider", "PackageProvider\PackageProvider.csproj", "{FBC3BF90-5CF8-4089-AAB8-D815F1EC6455}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PackageConsumer", "PackageConsumer\PackageConsumer.csproj", "{D2213A78-709D-476E-A870-357DD707895A}"
 	ProjectSection(ProjectDependencies) = postProject
 		{FBC3BF90-5CF8-4089-AAB8-D815F1EC6455} = {FBC3BF90-5CF8-4089-AAB8-D815F1EC6455}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_SolutionItems", "_SolutionItems", "{9C5FAB37-C6C4-429C-97DF-18F18C5FE22C}"
+	ProjectSection(SolutionItems) = preProject
+		NuGet.config = NuGet.config
+		Project.Shared.props = Project.Shared.props
 	EndProjectSection
 EndProject
 Global
