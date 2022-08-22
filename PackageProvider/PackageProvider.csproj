@@ -23,4 +23,28 @@
     <PackageOutputPath>$(MSBuildThisFileDirectory)../_Packages/LocalPackagesSource</PackageOutputPath>
   </PropertyGroup>
 
+  <!-- Makes it so that on changes of "PackageProducer" the "PackageConsumer" project is rebuilt
+       with the newly built "PackageProducer" assembly.
+  -->
+  <Target Name="_OverwriteAssemblyInGlobalPackagesFolder" AfterTargets="PostBuildEvent">
+
+    <PropertyGroup>
+      <ExtractedPackageTargetFolder>$(NuGetPackageFolders)/$(PackageId)/$(PackageVersion)/lib/$(TargetFramework)</ExtractedPackageTargetFolder>
+    </PropertyGroup>
+
+    <!-- Overwrites the assembly in the "extracted package" folder so that the "PackageConsumer" project can use
+         the newly built assembly without the need to change the version of the "PackageProducer".
+    -->
+    <Copy SourceFiles="$(TargetPath)"
+          DestinationFolder="$(ExtractedPackageTargetFolder)"
+          Condition=" Exists('$(ExtractedPackageTargetFolder)/$(AssemblyName).dll') "
+    />
+
+    <!-- Mark the project file of the "PackageConsumer" project as "modified" so that the C# compiler
+         picks up on the newly built "PackageProducer" assembly.
+    -->
+    <Touch Files="$(MSBuildThisFileDirectory)../PackageConsumer/PackageConsumer.csproj" />
+
+  </Target>
+
 </Project>
