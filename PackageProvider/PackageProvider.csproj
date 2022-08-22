@@ -20,7 +20,7 @@
   -->
   <PropertyGroup>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageOutputPath>$(MSBuildThisFileDirectory)..\_LocalPackages</PackageOutputPath>
+    <PackageOutputPath>$(MSBuildThisFileDirectory)../_Packages/LocalPackagesSource</PackageOutputPath>
   </PropertyGroup>
 
 </Project>
