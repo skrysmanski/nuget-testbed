@@ -50,4 +50,4 @@ build-packages/
 # Repository custom ignores
 #
 _Packages/LocalPackagesSource/*.nupkg
-_Packages/_PackagesStorage/
+_Packages/PackagesStorage/
